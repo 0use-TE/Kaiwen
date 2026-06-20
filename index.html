@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
+    <canvas id="three-canvas" class="three-canvas"></canvas>
     <div class="noise-overlay"></div>
     <div class="blood-drips" aria-hidden="true">
       <div class="drip drip-1"></div>
@@ -30,7 +31,10 @@
       <ul class="nav-links">
         <li><a href="#hero">首页</a></li>
         <li><a href="#about">关于</a></li>
-        <li><a href="#hobbies">爱好</a></li>
+        <li><a href="#hobbies">运动</a></li>
+        <li><a href="#training">训练</a></li>
+        <li><a href="#noodles">面条</a></li>
+        <li><a href="#battles">战绩</a></li>
         <li><a href="#dream">梦想</a></li>
       </ul>
       <button id="audioToggle" class="audio-btn" aria-label="开启背景音乐">
@@ -39,7 +43,7 @@
       </button>
     </nav>
 
-    <div id="audioPrompt" class="audio-prompt">
+    <div id="audioPrompt" class="audio-prompt hidden">
       <span>☠ 点击任意处开启恐怖氛围音 ☠</span>
     </div>
 
@@ -54,12 +58,12 @@
           <div class="floating-badge badge-4">🎖️</div>
         </div>
         <div class="hero-content">
-          <p class="hero-tag">三年级 · 铁血少年档案</p>
+          <p class="hero-tag blood-text">三年级 · 铁血少年档案</p>
           <h1 class="hero-title">
-            <span class="title-line">KAI</span>
-            <span class="title-line title-blood">WEN</span>
+            <span class="title-line blood-text">KAI</span>
+            <span class="title-line title-blood blood-text-heavy">WEN</span>
           </h1>
-          <p class="hero-subtitle">性格开朗 · 球场悍将 · 面条征服者</p>
+          <p class="hero-subtitle blood-text">性格开朗 · 球场悍将 · 面条征服者</p>
           <div class="hero-stats">
             <div class="stat-card">
               <span class="stat-num">3</span>
@@ -85,7 +89,7 @@
       <section id="about" class="section about">
         <div class="section-header">
           <span class="section-num">01</span>
-          <h2 class="section-title">关于我</h2>
+          <h2 class="section-title blood-text">关于我</h2>
           <div class="section-line"></div>
         </div>
         <div class="about-grid">
@@ -120,6 +124,27 @@
               </div>
             </div>
           </div>
+          <div class="card-3d about-card" data-tilt>
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="card-icon">⚔️</div>
+                <h3 class="blood-text">战斗宣言</h3>
+                <p>不怕苦，不怕累，跌倒了就爬起来。球场如战场，每一球都要拼尽全力，这就是 Kaiwen 的风格。</p>
+              </div>
+              <div class="card-face card-back">
+                <h3>座右铭</h3>
+                <p class="quote blood-text">"流血流汗不流泪，掉皮掉肉不掉队。"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trait-row">
+          <div class="trait-chip" data-tilt>🔥 热血</div>
+          <div class="trait-chip" data-tilt>⚡ 敏捷</div>
+          <div class="trait-chip" data-tilt>🛡️ 坚韧</div>
+          <div class="trait-chip" data-tilt>🎯 专注</div>
+          <div class="trait-chip" data-tilt>🤝 团结</div>
+          <div class="trait-chip" data-tilt>💪 力量</div>
         </div>
       </section>
 
@@ -127,7 +152,7 @@
       <section id="hobbies" class="section hobbies">
         <div class="section-header">
           <span class="section-num">02</span>
-          <h2 class="section-title">运动战场</h2>
+          <h2 class="section-title blood-text">运动战场</h2>
           <div class="section-line"></div>
         </div>
         <div class="hobby-arena">
@@ -172,13 +197,163 @@
             </div>
           </div>
         </div>
+        <div class="sport-facts">
+          <div class="fact-card" data-tilt>
+            <span class="fact-num blood-text-heavy">50+</span>
+            <span class="fact-label">足球训练场次</span>
+          </div>
+          <div class="fact-card" data-tilt>
+            <span class="fact-num blood-text-heavy">30+</span>
+            <span class="fact-label">排球训练场次</span>
+          </div>
+          <div class="fact-card" data-tilt>
+            <span class="fact-num blood-text-heavy">2</span>
+            <span class="fact-label">运动双项精通</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Training -->
+      <section id="training" class="section training">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title blood-text">铁血训练</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-time">06:30</div>
+            <div class="timeline-content">
+              <h3 class="blood-text">晨跑唤醒</h3>
+              <p>天还没亮就出门跑步，用脚步唤醒身体。这是军人式的自律，也是 Kaiwen 每天的第一个战斗。</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-time">12:00</div>
+            <div class="timeline-content">
+              <h3 class="blood-text">午间补给</h3>
+              <p>一碗热面条下肚，能量满格。牛肉面、炸酱面、担担面轮着来，吃饱了下午才有力气拼。</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-time">16:00</div>
+            <div class="timeline-content">
+              <h3 class="blood-text">球场特训</h3>
+              <p>足球带球绕桩、射门练习；排球垫球、扣杀、拦网。汗水浸透球衣，但从不喊累。</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-time">19:00</div>
+            <div class="timeline-content">
+              <h3 class="blood-text">体能强化</h3>
+              <p>俯卧撑、仰卧起坐、深蹲——把身体练成钢铁。为参军梦想打下最扎实的基础。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Noodles -->
+      <section id="noodles" class="section noodles">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 class="section-title blood-text">面条图鉴</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-desc blood-text">面条是 Kaiwen 的能量源泉，每一碗都是战前补给。</p>
+        <div class="noodle-grid">
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">S</div>
+            <div class="noodle-emoji">🍜</div>
+            <h3 class="blood-text">牛肉面</h3>
+            <p>浓汤大肉，一碗下去浑身是劲。球场上的最佳拍档。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 98%"></div></div>
+          </div>
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">A+</div>
+            <div class="noodle-emoji">🍝</div>
+            <h3 class="blood-text">炸酱面</h3>
+            <p>酱香浓郁，拌一拌就香到不行。训练完来一碗，绝了。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 92%"></div></div>
+          </div>
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">A</div>
+            <div class="noodle-emoji">🌶️</div>
+            <h3 class="blood-text">担担面</h3>
+            <p>麻辣够劲，吃了冒汗。就像球场上的激烈对抗。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 88%"></div></div>
+          </div>
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">A</div>
+            <div class="noodle-emoji">🥢</div>
+            <h3 class="blood-text">阳春面</h3>
+            <p>清淡鲜美，简单却温暖。像 Kaiwen 开朗的性格一样舒服。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 85%"></div></div>
+          </div>
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">B+</div>
+            <div class="noodle-emoji">🦐</div>
+            <h3 class="blood-text">海鲜面</h3>
+            <p>鲜到眉毛掉下来，偶尔犒劳自己的豪华补给。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 80%"></div></div>
+          </div>
+          <div class="noodle-card" data-tilt>
+            <div class="noodle-rank">S+</div>
+            <div class="noodle-emoji">🔥</div>
+            <h3 class="blood-text">妈妈做的面</h3>
+            <p>最好吃的面永远是妈妈煮的。满分能量，无限续航。</p>
+            <div class="noodle-power"><div class="noodle-fill" style="--fill: 100%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Battles -->
+      <section id="battles" class="section battles">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2 class="section-title blood-text">战斗日志</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="battle-log">
+          <div class="battle-entry" data-tilt>
+            <div class="battle-date blood-text">2026.03</div>
+            <div class="battle-info">
+              <h3>足球班级联赛 · 帽子戏法</h3>
+              <p>一场比赛攻入三球，带领班级拿下胜利。赛后全场鼓掌，Kaiwen 笑得比谁都开心。</p>
+              <span class="battle-tag">⚽ MVP</span>
+            </div>
+          </div>
+          <div class="battle-entry" data-tilt>
+            <div class="battle-date blood-text">2026.02</div>
+            <div class="battle-info">
+              <h3>排球年级赛 · 王牌扣杀</h3>
+              <p>决胜局一记暴扣终结比赛，网前如同一尊战神。队友们把他高高举起。</p>
+              <span class="battle-tag">🏐 得分王</span>
+            </div>
+          </div>
+          <div class="battle-entry" data-tilt>
+            <div class="battle-date blood-text">2026.01</div>
+            <div class="battle-info">
+              <h3>体能测试 · 全项优秀</h3>
+              <p>50米跑、立定跳远、仰卧起坐全部优秀。老师评价：有当兵的料子。</p>
+              <span class="battle-tag">💪 全优</span>
+            </div>
+          </div>
+          <div class="battle-entry" data-tilt>
+            <div class="battle-date blood-text">2025.12</div>
+            <div class="battle-info">
+              <h3>冬季长跑 · 坚持到底</h3>
+              <p>零下气温里跑完3000米，腿酸肺炸但没放弃。冲过终点线时眼眶发红——是骄傲。</p>
+              <span class="battle-tag">🏃 铁人</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Dream -->
       <section id="dream" class="section dream">
         <div class="section-header">
-          <span class="section-num">03</span>
-          <h2 class="section-title">铁血梦想</h2>
+          <span class="section-num">06</span>
+          <h2 class="section-title blood-text">铁血梦想</h2>
           <div class="section-line"></div>
         </div>
         <div class="dream-stage">
@@ -191,15 +366,21 @@
             </div>
           </div>
           <div class="dream-text">
-            <h3 class="dream-headline">参军 · 保家卫国</h3>
+            <h3 class="dream-headline blood-text-heavy">参军 · 保家卫国</h3>
             <p class="dream-desc">
               穿上军装，守卫国土——这是 Kaiwen 心中最炽热的梦想。
               球场上的拼搏是在磨练意志，每一次训练都是在为那个庄严的目标蓄力。
             </p>
             <div class="dream-motto">
-              <span class="motto-line">球场即战场</span>
-              <span class="motto-line">汗水铸军魂</span>
-              <span class="motto-line">热血护山河</span>
+              <span class="motto-line blood-text">球场即战场</span>
+              <span class="motto-line blood-text">汗水铸军魂</span>
+              <span class="motto-line blood-text">热血护山河</span>
+            </div>
+            <div class="dream-path">
+              <div class="path-step"><span class="path-year blood-text">现在</span><span>刻苦训练，打好身体底子</span></div>
+              <div class="path-step"><span class="path-year blood-text">中学</span><span>加入校队，磨练团队作战</span></div>
+              <div class="path-step"><span class="path-year blood-text">高中</span><span>体能巅峰，准备入伍体检</span></div>
+              <div class="path-step"><span class="path-year blood-text-heavy">未来</span><span>穿上军装，守卫国土！</span></div>
             </div>
           </div>
         </div>
@@ -211,6 +392,78 @@
       <p>© 2026 Kaiwen · 铁血少年档案</p>
       <p class="footer-motto">保家卫国，从每一天开始</p>
     </footer>
+
+    <!-- 骷髅手慢慢伸进来 -->
+    <div id="skeletonHand" class="skeleton-hand" aria-hidden="true">
+      <svg class="hand-svg" viewBox="0 0 280 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- 前臂 -->
+        <rect x="80" y="280" width="120" height="120" rx="20" fill="#d4ccc0" stroke="#8a8070" stroke-width="2"/>
+        <!-- 关节 -->
+        <ellipse cx="140" cy="280" rx="50" ry="18" fill="#c0b8a8" stroke="#7a7060" stroke-width="1.5"/>
+        <!-- 手掌 -->
+        <path d="M60 200 Q140 170 220 200 L220 280 Q140 300 60 280 Z" fill="#e0d8c8" stroke="#8a8070" stroke-width="2"/>
+        <!-- 五指骨 -->
+        <rect x="55" y="60" width="22" height="150" rx="10" fill="#e8e0d0" stroke="#9a9080" stroke-width="1.5" transform="rotate(-12 66 135)"/>
+        <rect x="88" y="30" width="22" height="175" rx="10" fill="#e8e0d0" stroke="#9a9080" stroke-width="1.5" transform="rotate(-4 99 117)"/>
+        <rect x="128" y="20" width="24" height="185" rx="10" fill="#e8e0d0" stroke="#9a9080" stroke-width="1.5"/>
+        <rect x="168" y="30" width="22" height="175" rx="10" fill="#e8e0d0" stroke="#9a9080" stroke-width="1.5" transform="rotate(4 179 117)"/>
+        <rect x="200" y="60" width="22" height="150" rx="10" fill="#e8e0d0" stroke="#9a9080" stroke-width="1.5" transform="rotate(12 211 135)"/>
+        <!-- 指节 -->
+        <circle cx="66" cy="120" r="12" fill="#d0c8b8" stroke="#8a8070" stroke-width="1"/>
+        <circle cx="99" cy="100" r="12" fill="#d0c8b8" stroke="#8a8070" stroke-width="1"/>
+        <circle cx="140" cy="90" r="13" fill="#d0c8b8" stroke="#8a8070" stroke-width="1"/>
+        <circle cx="179" cy="100" r="12" fill="#d0c8b8" stroke="#8a8070" stroke-width="1"/>
+        <circle cx="211" cy="120" r="12" fill="#d0c8b8" stroke="#8a8070" stroke-width="1"/>
+        <!-- 指甲/血迹 -->
+        <ellipse cx="66" cy="55" rx="10" ry="8" fill="#1a1010"/>
+        <ellipse cx="99" cy="28" rx="10" ry="8" fill="#1a1010"/>
+        <ellipse cx="140" cy="18" rx="11" ry="8" fill="#1a1010"/>
+        <ellipse cx="179" cy="28" rx="10" ry="8" fill="#1a1010"/>
+        <ellipse cx="211" cy="55" rx="10" ry="8" fill="#1a1010"/>
+        <!-- 血迹 -->
+        <path d="M130 250 Q140 270 135 310 Q138 330 140 360" stroke="#8b0000" stroke-width="3" fill="none" opacity="0.7"/>
+        <path d="M100 260 Q95 290 90 320" stroke="#8b0000" stroke-width="2" fill="none" opacity="0.5"/>
+        <circle cx="140" cy="370" r="5" fill="#cc1111" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- 贴脸骷髅惊吓 -->
+    <div id="scareFlash" class="scare-flash"></div>
+    <div id="scareOverlay" class="scare-overlay">
+      <div id="scareSkull" class="scare-skull">
+        <div class="skull">
+          <div class="skull-glow"></div>
+          <div class="skull-cranium">
+            <div class="skull-crack skull-crack-1"></div>
+            <div class="skull-crack skull-crack-2"></div>
+          </div>
+          <div class="skull-eyes">
+            <div class="skull-eye"><div class="eye-fire"></div></div>
+            <div class="skull-eye"><div class="eye-fire"></div></div>
+          </div>
+          <div class="skull-nose"></div>
+          <div class="skull-jaw">
+            <div class="skull-teeth">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 随机惊吓层 -->
+    <div id="scareCorner" class="scare-corner">
+      <div class="corner-skull">💀</div>
+    </div>
+    <div id="scareWhisper" class="scare-whisper"></div>
+    <div id="scareGlitch" class="scare-glitch">
+      <div class="glitch-bar"></div>
+      <div class="glitch-bar"></div>
+      <div class="glitch-bar"></div>
+      <div class="glitch-bar"></div>
+      <div class="glitch-bar"></div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,4 +1,6 @@
 import { initHorrorAudio } from './audio.js'
+import { initJumpScares } from './scares.js'
+import { initSkeletonHand } from './skeleton-hand.js'
 
 // ===== 3D Tilt Effect =====
 function initTilt() {
@@ -41,7 +43,7 @@ function initCardFlip() {
 // ===== Scroll Reveal =====
 function initScrollReveal() {
   const reveals = document.querySelectorAll(
-    '.section-header, .about-card, .hobby-panel, .dream-stage, .stat-card'
+    '.section-header, .about-card, .hobby-panel, .dream-stage, .stat-card, .trait-chip, .fact-card, .timeline-item, .noodle-card, .battle-entry, .path-step'
   )
 
   reveals.forEach((el) => el.classList.add('reveal'))
@@ -62,7 +64,7 @@ function initScrollReveal() {
 
 // ===== Skill Bar Animation =====
 function initSkillBars() {
-  const fills = document.querySelectorAll('.skill-fill')
+  const fills = document.querySelectorAll('.skill-fill, .noodle-fill')
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -145,4 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDreamEmblem()
   initNavScroll()
   initHorrorAudio()
+  initJumpScares()
+  initSkeletonHand()
+  import('./three-scene.js').then((m) => m.initThreeScene())
 })
