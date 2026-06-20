@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaiwen · 铁血少年</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&family=Orbitron:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
+    <div class="blood-drips" aria-hidden="true">
+      <div class="drip drip-1"></div>
+      <div class="drip drip-2"></div>
+      <div class="drip drip-3"></div>
+      <div class="drip drip-4"></div>
+      <div class="drip drip-5"></div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-logo">
+        <span class="logo-skull">☠</span>
+        <span class="logo-text">KAIWEN</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">首页</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#hobbies">爱好</a></li>
+        <li><a href="#dream">梦想</a></li>
+      </ul>
+      <button id="audioToggle" class="audio-btn" aria-label="开启背景音乐">
+        <span class="audio-icon">🔊</span>
+        <span class="audio-label">♪ OFF</span>
+      </button>
+    </nav>
+
+    <div id="audioPrompt" class="audio-prompt">
+      <span>☠ 点击任意处开启恐怖氛围音 ☠</span>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-3d-scene" id="heroScene">
+          <div class="floating-badge badge-1">⚽</div>
+          <div class="floating-badge badge-2">🏐</div>
+          <div class="floating-badge badge-3">🍜</div>
+          <div class="floating-badge badge-4">🎖️</div>
+        </div>
+        <div class="hero-content">
+          <p class="hero-tag">三年级 · 铁血少年档案</p>
+          <h1 class="hero-title">
+            <span class="title-line">KAI</span>
+            <span class="title-line title-blood">WEN</span>
+          </h1>
+          <p class="hero-subtitle">性格开朗 · 球场悍将 · 面条征服者</p>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-num">3</span>
+              <span class="stat-label">年级</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">活力</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">斗志</span>
+            </div>
+          </div>
+          <a href="#about" class="cta-btn">进入档案 →</a>
+        </div>
+        <div class="scroll-hint">
+          <span>↓</span>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section about">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2 class="section-title">关于我</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="card-3d about-card" data-tilt>
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="card-icon">👦</div>
+                <h3>基本信息</h3>
+                <p>男生，三年级学生。性格开朗，在球场上是个不折不扣的悍将，笑起来阳光，跑起来像风。</p>
+              </div>
+              <div class="card-face card-back">
+                <h3>性格标签</h3>
+                <ul class="tag-list">
+                  <li>开朗</li>
+                  <li>勇敢</li>
+                  <li>热血</li>
+                  <li>不服输</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-3d about-card" data-tilt>
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="card-icon">🍜</div>
+                <h3>最爱美食</h3>
+                <p>面条！各种面条都爱——牛肉面、炸酱面、担担面……一碗热腾腾的面条，就是战斗前的最佳补给。</p>
+              </div>
+              <div class="card-face card-back">
+                <h3>面条宣言</h3>
+                <p class="quote">"没有一碗面解决不了的疲惫，如果有，就再来一碗。"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section id="hobbies" class="section hobbies">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 class="section-title">运动战场</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="hobby-arena">
+          <div class="hobby-panel hobby-football" data-tilt>
+            <div class="panel-glow"></div>
+            <div class="panel-content">
+              <div class="panel-icon">⚽</div>
+              <h3>足球</h3>
+              <p>绿茵场上的追风少年。带球突破、精准射门，每一次奔跑都是对胜利的渴望。</p>
+              <div class="skill-bar">
+                <span class="skill-label">速度</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 90%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-label">射门</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 85%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-label">团队</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 95%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="hobby-panel hobby-volleyball" data-tilt>
+            <div class="panel-glow"></div>
+            <div class="panel-content">
+              <div class="panel-icon">🏐</div>
+              <h3>排球</h3>
+              <p>网前的铁血战士。高高跃起，全力扣杀，用汗水书写属于自己的荣耀。</p>
+              <div class="skill-bar">
+                <span class="skill-label">扣杀</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 88%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-label">拦网</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 82%"></div></div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-label">配合</span>
+                <div class="skill-track"><div class="skill-fill" style="--fill: 92%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dream -->
+      <section id="dream" class="section dream">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title">铁血梦想</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="dream-stage">
+          <div class="dream-emblem" id="dreamEmblem">
+            <div class="emblem-ring ring-1"></div>
+            <div class="emblem-ring ring-2"></div>
+            <div class="emblem-ring ring-3"></div>
+            <div class="emblem-core">
+              <span class="emblem-icon">🎖️</span>
+            </div>
+          </div>
+          <div class="dream-text">
+            <h3 class="dream-headline">参军 · 保家卫国</h3>
+            <p class="dream-desc">
+              穿上军装，守卫国土——这是 Kaiwen 心中最炽热的梦想。
+              球场上的拼搏是在磨练意志，每一次训练都是在为那个庄严的目标蓄力。
+            </p>
+            <div class="dream-motto">
+              <span class="motto-line">球场即战场</span>
+              <span class="motto-line">汗水铸军魂</span>
+              <span class="motto-line">热血护山河</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-blood-line"></div>
+      <p>© 2026 Kaiwen · 铁血少年档案</p>
+      <p class="footer-motto">保家卫国，从每一天开始</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
